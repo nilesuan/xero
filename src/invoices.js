@@ -1,4 +1,5 @@
 var moment = require('moment');
+var querystring = require('querystring');
 
 
 module.exports = function (xero) {
@@ -36,6 +37,18 @@ module.exports = function (xero) {
     
     find: function (id, callback) {
       xero.get('/Invoices/' + id, function (err, json) {
+        if (err) {
+          return callback(err);
+        }
+        
+        callback(null, json.Invoices[0]);
+      });
+    },
+    
+    
+    findparams: function (params, callback) {
+      var query = querystring.stringify(params);
+      xero.get('/Invoices/?' + query, function (err, json) {
         if (err) {
           return callback(err);
         }
