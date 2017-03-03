@@ -4,7 +4,7 @@
 
 ## Install
 
-    npm install xero-extended
+    npm install xero-v3
 
 
 ## Use
@@ -128,3 +128,4 @@ http://developer.xero.com/api/
 
 * thallium205 <https://github.com/thallium205>
 * nathanhoad <https://github.com/nathanhoad>
+* nilesuan <https://github.com/nilesuan>
