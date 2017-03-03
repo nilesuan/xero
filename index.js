@@ -1,6 +1,11 @@
 var crypto  = require("crypto");
 var oauth   = require("oauth");
-var easyxml = require('easyxml');
+var EasyXml = require('easyxml');
+
+var easyxml = new EasyXml({
+    rootElement: 'Request',
+    manifest: true
+});
 
 var XERO_BASE_URL = 'https://api.xero.com';
 var XERO_API_URL = XERO_BASE_URL + '/api.xro/2.0';
@@ -9,8 +14,6 @@ var XERO_API_URL = XERO_BASE_URL + '/api.xro/2.0';
 function Xero (key, secret, rsa_key) {
     this.key = key;
     this.secret = secret;
-
-    easyxml.configure({rootElement: 'Request', manifest: true});
 
     this.oa = new oauth.OAuth(null, null, key, secret, '1.0', null, "PLAINTEXT", null, { "Accept": "application/json" });
     this.oa._signatureMethod = "RSA-SHA1"

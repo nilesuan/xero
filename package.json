@@ -1,5 +1,5 @@
 {
-  "name": "xero-extended",
+  "name": "xero-v3",
   "version": "0.0.7",
   "dependencies": {
     "oauth": "0.9.10",
@@ -14,7 +14,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nathanhoad/xero.git"
+    "url": "git@github.com:nilesuan/xero.git"
   },
   "keywords": [
     "xero",
@@ -25,10 +25,16 @@
     "name": "thallium205",
     "url": "https://github.com/thallium205"
   },
-  "contributors": {
-    "name": "nathanhoad",
-    "url": "http://nathanhoad.net"
-  },
+  "contributors": [
+    {
+      "name": "nathanhoad",
+      "url": "http://nathanhoad.net"
+    },
+    {
+      "name": "nilesuan",
+      "url": "http://www.nilesuan.com"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "test": "mocha --reporter spec"
