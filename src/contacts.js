@@ -28,6 +28,18 @@ module.exports = function (xero) {
     },
     
     
+    findparams: function (params, callback) {
+      var query = querystring.stringify(params);
+      xero.get('/Contacts/?' + query, function (err, json) {
+        if (err) {
+          return callback(err);
+        }
+        
+        callback(null, json);
+      });
+    },
+    
+    
     create: function (params, callback) {
       
       xero.post('/Contacts', { Contact: params }, function (err, json) {
