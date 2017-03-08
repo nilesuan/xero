@@ -41,7 +41,7 @@ module.exports = function (xero) {
           return callback(err);
         }
         
-        callback(null, json.Invoices[0]);
+        callback(null, json.Invoices);
       });
     },
     
@@ -53,7 +53,7 @@ module.exports = function (xero) {
           return callback(err);
         }
         
-        callback(null, json.Invoices[0]);
+        callback(null, json.Invoices);
       });
     },
     
