@@ -1,3 +1,5 @@
+var querystring = require('querystring');
+
 module.exports = function (xero) {
   
   xero.Payments = {
