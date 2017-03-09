@@ -23,6 +23,18 @@ module.exports = function (xero) {
     },
     
     
+    findparams: function (params, callback) {
+      var query = querystring.stringify(params);
+      xero.get('/Payments/?' + query, function (err, json) {
+        if (err) {
+          return callback(err);
+        }
+        
+        callback(null, json.Payments);
+      });
+    },
+    
+    
     create: function (params, callback) {
       xero.put('/Payments', { Payments: { Payment: params }}, function (err, json) {
         if (err) {
